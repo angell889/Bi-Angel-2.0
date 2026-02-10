@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BI Ventas Educativo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            margin-top: 40px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            text-align: left;
+            font-size: 14px;
+        }
+        th {
+            background: #f0f0f0;
+        }
+        .kpis {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .kpi {
+            border: 1px solid #ccc;
+            padding: 15px;
+            min-width: 180px;
+            background: #fafafa;
+        }
+        canvas {
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>📊 Business Intelligence de Ventas</h1>
+
+<p id="filas-info"></p>
+
+<h2>KPIs</h2>
+<div class="kpis">
+    <div class="kpi" id="kpi-ventas"></div>
+    <div class="kpi" id="kpi-unidades"></div>
+</div>
+
+<h2>Gráficos</h2>
+<canvas id="chartTopProductos"></canvas>
+<canvas id="chartFranja"></canvas>
+<canvas id="chartFamilia"></canvas>
+
+<h2>Primeras 10 filas RAW</h2>
+<table id="tabla-raw"></table>
+
+<h2>Primeras 10 filas LIMPIAS</h2>
+<table id="tabla-clean"></table>
+
+<button id="download">⬇️ Descargar CSV limpio</button>
+
+</body>
+</html>
